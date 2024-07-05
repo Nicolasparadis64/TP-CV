@@ -12,7 +12,7 @@ export default function AdminExperience() {
 
   async function fetchExperience() {
       try {
-          const response = await fetch("http://localhost:3001/experience");
+          const response = await fetch("https://tp-cv-api.onrender.com/experience");
           if (!response.ok) {
               throw new Error("Network response was not ok");
             }
@@ -33,7 +33,7 @@ export default function AdminExperience() {
     if (Nom !== "" && date !== "" && experiences !== "") {
         try {
           console.log({Nom, Date, experiences});
-        const response = await fetch("http://localhost:3001/experience", {
+        const response = await fetch("https://tp-cv-api.onrender.com/experiences", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

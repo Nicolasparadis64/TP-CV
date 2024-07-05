@@ -5,7 +5,7 @@ export default function CentreInteret() {
 
     async function fetchCentreInteret() {
         try {
-            const response = await fetch (`http://localhost:3001/centreInteret`);
+            const response = await fetch (`https://tp-cv-api.onrender.com//centreInteret`);
             if (!response.ok) {
                 throw new Error ('Network response was not ok')
             }
@@ -21,12 +21,12 @@ useEffect(() => {
 },[])
 
   return (
-    <div>
-      <h2 className="w-full flex text-white justify-center items-center mb-10 bg-purple-800 p-5 rounded-lg shadow-xl">
+    <div className="flex items-center justify-center flex-col">
+      <h2 className="w-1/2 flex text-white justify-center items-center mb-10 bg-purple-800 p-5 rounded-lg shadow-xxl">
         Centres Interets
       </h2>
-      <table>
-        <thead>
+      <table  className='flex justify-center items-center flex-col'>
+        <thead >
           <tr>
             <th className="text-2xl">Description</th>
           </tr>
@@ -34,7 +34,7 @@ useEffect(() => {
         <tbody>
           {centreInteret.map((item) => (
             <tr key={item._id}>
-              <td>{item.description}</td>
+              <td >{item.description}</td>
             </tr>
           ))}
         </tbody>

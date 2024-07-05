@@ -13,6 +13,8 @@ import Langue from "../ul/Langue";
 import CentreInteret from "../ul/CentreInteret";
 import Experience from "../ul/Experience";
 import Formation from "../ul/Formation";
+import { RiAdminFill } from "react-icons/ri";
+
 
 
 
@@ -23,19 +25,20 @@ export default function Home() {
 
     <div>
 
-      <main className="flex flex-col justify-center bg-gray-900 w-full h-full">
-        <nav className="flex flex-row  h-full">
+      <main className="flex flex-col justify-center bg-[#222] w-full h-full">
+        <nav className="fixed top-0 bg-[#333] h-full flex items-center">
 
         <button >
         <Link to="/Admin"> 
-        <img src="Imports/logo.png" alt="" className="w-[70px] h-[70px] m-4"/>
+        {/* <img src="Imports/logo.png" alt="" className="w-[70px] h-[70px] m-4"/> */}
+        <RiAdminFill size={50} className="p-5 h-[75px] w-[75px]"/>
         </Link>
         </button>
 
         </nav>
 {/* <AdminContact/>
 <AdminCompetence/> */}
-        <section className="flex flex-col p-10 w-full h-full bg-gray-900 shadow-lg rounded-lg">
+        <section className="flex flex-col p-10 w-full h-full bg-[#222] shadow-lg rounded-lg">
             
             <div>
     <Contact></Contact>
