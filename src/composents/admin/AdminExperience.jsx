@@ -33,7 +33,7 @@ export default function AdminExperience() {
     if (Nom !== "" && date !== "" && experiences !== "") {
         try {
           console.log({Nom, Date, experiences});
-        const response = await fetch("https://tp-cv-api.onrender.com/experiences", {
+        const response = await fetch("https://tp-cv-api.onrender.com/experience", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
