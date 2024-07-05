@@ -33,7 +33,7 @@ export default function AdminLangue() {
     if (language !== "" && level !== "") {
       // console.log({language, level});
       try {
-        const response = await fetch('http://localhost:3001/langue', {
+        const response = await fetch('https://tp-cv-api.onrender.com/langue', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ export default function AdminLangue() {
 
   async function handleDelete(id) {
     try {
-      const response = await fetch(`http://localhost:3001/langue/${id}`, {
+      const response = await fetch(`https://tp-cv-api.onrender.com/langue/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) {

@@ -13,7 +13,7 @@ export default function AdminFormation() {
 
   async function fetchFormations() {
     try {
-      const response = await fetch('http://localhost:3001/formation');
+      const response = await fetch('https://tp-cv-api.onrender.com/formation');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -32,7 +32,7 @@ export default function AdminFormation() {
     event.preventDefault();
     if (name !== "" && date !== "" && description !== "") {
       try {
-        const response = await fetch('http://localhost:3001/formation', {
+        const response = await fetch('https://tp-cv-api.onrender.com/formation', {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
