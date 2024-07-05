@@ -14,7 +14,7 @@ export default function AdminCompetence() {
 
   async function fetchCompetence() {
     try {
-      const response = await fetch("http://localhost:3001/competence"); // corrected URL
+      const response = await fetch("https://tp-cv-api.onrender.com/competence"); // corrected URL
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -31,7 +31,7 @@ export default function AdminCompetence() {
 
   async function handleDelete(id) {
     try {
-      const response = await fetch(`http://localhost:3001/competence/${id}`, {
+      const response = await fetch(`https://tp-cv-api.onrender.com/competence/${id}`, {
         method: "DELETE",
       });
       if (!response.ok) {
@@ -47,7 +47,7 @@ export default function AdminCompetence() {
     event.preventDefault();
     // const data = { skill };
     if (skill !== "") {
-      const response = await fetch("http://localhost:3001//competence", {
+      const response = await fetch("https://tp-cv-api.onrender.com/competence", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

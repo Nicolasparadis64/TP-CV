@@ -7,7 +7,7 @@ export default function AdminContact() {
   const [tel, setTel] = useState('')
 
   async function fetchContact() {
-    const response = await fetch('http://localhost:3001/contact')
+    const response = await fetch('https://tp-cv-api.onrender.com/contact')
     const data = await response.json()
     setNom(data[0].nom)
     setEmail(data[0].email)
@@ -22,7 +22,7 @@ export default function AdminContact() {
   function handleSubmit(event) {
     event.preventDefault()
     const data = { tel, nom, email, prenom }
-    fetch('http://localhost:3001/contact', {
+    fetch('https://tp-cv-api.onrender.com/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -68,7 +68,7 @@ export default function AdminExperience() {
 
   async function handleDelete(id) {
     try {
-      const response = await fetch(`http://localhost:3001/experience/${id}`, {
+      const response = await fetch(`https://tp-cv-api.onrender.com/experience/${id}`, {
         method: "DELETE",
       });
       if (!response.ok) {

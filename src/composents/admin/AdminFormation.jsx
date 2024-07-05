@@ -67,7 +67,7 @@ export default function AdminFormation() {
 
   async function handleDelete(id) {
     try {
-      const response = await fetch(`http://localhost:3001/formation/${id}`, {
+      const response = await fetch(`https://tp-cv-api.onrender.com/formation/${id}`, {
         method: 'DELETE'
       });
       if (!response.ok) {

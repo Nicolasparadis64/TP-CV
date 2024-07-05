@@ -12,7 +12,7 @@ export default function AdminLangue() {
 
   async function fetchLangue() {
     try {
-      const response = await fetch('http://localhost:3001/langue');
+      const response = await fetch('https://tp-cv-api.onrender.com/langue');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -82,9 +82,6 @@ export default function AdminLangue() {
     }
   }
 
-  function handleSave() {
-    console.log(language);
-  }
 
   return (
     <div>

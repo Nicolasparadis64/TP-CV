@@ -14,7 +14,7 @@ export default function AdminCentreInteret() {
 
 async function fetchCentreInteret() {
   try {
-    const response = await fetch ('http://localhost:3001/centreInteret')
+    const response = await fetch ('https://tp-cv-api.onrender.com/centreInteret')
     if (!response.ok) {
       throw new Error ('Network response was not ok')
     } 
@@ -34,7 +34,7 @@ async function handleSubmit(event) {
   event.preventDefault();
   if (description !== "") {
     try {
-      const response = await fetch ('http://localhost:3001/centreInteret', {
+      const response = await fetch ('https://tp-cv-api.onrender.com/centreInteret', {
         method : 'POST',
         headers : {
           'Content-Type' : 'application/json'
@@ -68,7 +68,7 @@ function handleSave() {
 
 async function handleDelete(id) {
   try {
-    const response = await fetch (`http://localhost:3001/centreInteret/${id}`, {
+    const response = await fetch (`https://tp-cv-api.onrender.com/centreInteret/${id}`, {
       method : 'DELETE'
     })
     if (!response.ok) {
