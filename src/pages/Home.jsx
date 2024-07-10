@@ -12,6 +12,7 @@ import Langue from "../ul/Langue";
 import CentreInteret from "../ul/CentreInteret";
 import Experience from "../ul/Experience";
 import Formation from "../ul/Formation";
+import Portfolio from "./Portfolio";
 import { RiAdminLine } from "react-icons/ri";
 import { IoBagHandleOutline } from "react-icons/io5";
 
