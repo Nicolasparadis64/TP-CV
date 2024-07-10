@@ -21,14 +21,14 @@ export default function Formation() {
     }, [])
 
     return (
-        <div className="flex flex-col items-center justify-center p-6 sm:p-12 md:p-16">
-            <h2 className="w-full sm:w-3/4 md:w-1/2 text-center text-white mb-10 bg-purple-800 p-5 rounded-lg shadow-xl">
+        <div className="flex flex-col items-center justify-center px-12 py-5 max-md:p-16 max-sm:p-12">
+            <h2 className="w-full sm:w-3/4 md:w-1/2 text-start text-white mb-10 bg-purple-800 p-5 rounded-lg shadow-xl">
                 Formation
             </h2>
             <div className="w-full sm:w-3/4 md:w-1/2 overflow-x-auto">
-                <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+                <table className="min-w-full  shadow-md rounded-lg overflow-hidden">
                     <thead>
-                        <tr className="bg-purple-700 text-white text-left">
+                        <tr className="text-grey text-left">
                             <th className="py-3 px-4 text-2xl">Name</th>
                             <th className="py-3 px-4 text-2xl">Date</th>
                             <th className="py-3 px-4 text-2xl">Experience</th>
@@ -36,7 +36,7 @@ export default function Formation() {
                     </thead>
                     <tbody>
                         {formation.map((item) => (
-                            <tr key={item._id} className="border-b border-gray-200">
+                            <tr key={item._id} className="text-white">
                                 <td className="py-3 px-4">{item.Nom}</td>
                                 <td className="py-3 px-4">{item.Date}</td>
                                 <td className="py-3 px-4">{item.Formation}</td>

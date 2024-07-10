@@ -21,26 +21,28 @@ export default function Langue() {
   }, []);
 
   return (
-    <div className="flex items-center justify-center flex-col">
-      <h2 className="w-1/2 flex text-white justify-center items-center mb-10 bg-purple-800 p-5 rounded-lg shadow-xl">
+    <div className="flex flex-col items-center justify-center px-12 py-5 max-md:p-16 max-sm:p-12">
+      <h2 className="w-full sm:w-3/4 md:w-1/2 text-start text-white mb-10 bg-purple-800 p-5 rounded-lg shadow-xl">
         Langues
       </h2>
-      <table className='flex justify-center items-center flex-col'>
+      <div className="w-full sm:w-3/4 md:w-1/2 overflow-x-auto">
+      <table className="min-w-full  shadow-md rounded-lg overflow-hidden">
         <thead>
-          <tr>
-            <th className="text-2xl">Name</th>
-            <th className="text-2xl">Level</th>
+          <tr className="text-grey text-left">
+            <th className="py-3 px-4 text-2xl">Name</th>
+            <th className="py-3 px-4 text-2xl">Level</th>
           </tr>
         </thead>
         <tbody>
           {langues.map((item) => (
-            <tr key={item._id}>
-              <td>{item.name}</td>
-              <td>{item.level}</td>
+            <tr key={item._id} className="text-white">
+              <td className="py-3 px-4">{item.name}</td>
+              <td className="py-3 px-4">{item.level}</td>
             </tr>
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }
