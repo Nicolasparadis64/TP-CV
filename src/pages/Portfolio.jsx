@@ -34,7 +34,7 @@ export default function Portfolio() {
           </button>
         </nav>
 
-        <section className="flex flex-col w-full h-full bg-[#222] min-w-full shadow-lg rounded-lg pt-24 sm:pt-0 sm:ml-20">
+        <section className="flex text-white flex-col w-full h-full bg-[#222] min-w-full shadow-lg rounded-lg pt-24 sm:pt-0 sm:ml-20">
           <div className="p-4 sm:p-6 md:p-12 lg:p-16 min-w-full">
             <Outdoor/>
           </div>

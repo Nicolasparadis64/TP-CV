@@ -29,16 +29,16 @@ export default function Formation() {
                 <table className="min-w-full  shadow-md rounded-lg overflow-hidden">
                     <thead>
                         <tr className="text-grey text-left">
-                            <th className="py-3 px-4 text-2xl">Name</th>
-                            <th className="py-3 px-4 text-2xl">Date</th>
-                            <th className="py-3 px-4 text-2xl">Experience</th>
+                            <th className="py-3 px-4 text-2xl text-gray-400">Nom</th>
+                            <th className="py-3 px-4 text-2xl text-gray-400">Date</th>
+                            <th className="py-3 px-4 text-2xl text-gray-400">Experience</th>
                         </tr>
                     </thead>
                     <tbody>
                         {formation.map((item) => (
                             <tr key={item._id} className="text-white">
                                 <td className="py-3 px-4">{item.Nom}</td>
-                                <td className="py-3 px-4">{item.Date}</td>
+                                <td className="py-3 px-4 text-gray-600">{item.Date}</td>
                                 <td className="py-3 px-4">{item.Formation}</td>
                             </tr>
                         ))}

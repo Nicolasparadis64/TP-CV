@@ -29,8 +29,8 @@ export default function Langue() {
       <table className="min-w-full  shadow-md rounded-lg overflow-hidden">
         <thead>
           <tr className="text-grey text-left">
-            <th className="py-3 px-4 text-2xl">Name</th>
-            <th className="py-3 px-4 text-2xl">Level</th>
+            <th className="py-3 px-4 text-2xl text-gray-400">Nom</th>
+            <th className="py-3 px-4 text-2xl text-gray-400">Level</th>
           </tr>
         </thead>
         <tbody>

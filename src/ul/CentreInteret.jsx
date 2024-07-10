@@ -29,7 +29,7 @@ useEffect(() => {
       <table className="min-w-full  shadow-md rounded-lg overflow-hidden">
         <thead >
           <tr className="text-grey text-left">
-            <th className="py-3 px-4 text-2xl">Description</th>
+            <th className="py-3 px-4 text-2xl text-gray-400">Description</th>
           </tr>
         </thead>
         <tbody>
