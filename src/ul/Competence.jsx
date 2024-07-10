@@ -13,7 +13,7 @@ export default function Competence() {
   });
 
   return (
-    <div className="flex flex-col items-center justify-center px-12 py-5 max-md:p-16 max-sm:p-12">
+    <div className="flex flex-col items-center justify-center px-12 py-5 max-md:p-16 max-sm:p-12 bg-[#222]">
       <h2 className="w-full sm:w-3/4 md:w-1/2 text-start text-white mb-10 bg-purple-800 p-5 rounded-lg shadow-xl">
         Compétences
       </h2>

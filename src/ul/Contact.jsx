@@ -23,7 +23,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center px-12 py-5 max-md:p-16 max-sm:p-12">
+    <div className="flex flex-col items-center justify-center px-12 py-5 max-md:p-16 max-sm:p-12 bg-[#222]">
       {contact.length > 0 && (
         <div className="text-white flex flex-col justify-center items-center w-full sm:w-3/4 md:w-1/2">
           <Profile
