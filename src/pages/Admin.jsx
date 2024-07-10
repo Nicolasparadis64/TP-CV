@@ -15,7 +15,7 @@ export default function Admin() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (username === "nicolas" && password === "azerty") {
+    if (username === localStorage.getItem('username') && password === localStorage.getItem('password')) {
       setIsLogged(true);
     } else {
       alert("Les identifiants ne sont pas corrects");
