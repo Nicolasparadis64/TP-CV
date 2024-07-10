@@ -84,49 +84,66 @@ export default function AdminLangue() {
 
 
   return (
-    <div>
-      <button onClick={addLanguage} type="button" className="btn btn-primary btn-sm"><IoAddCircleSharp size={24}/></button>
-      {isLanguage && (
-        <form onSubmit={handleSubmit}>
+    <div className="p-4 sm:p-6 md:p-8 lg:p-10 bg-[#222] rounded-lg shadow-lg space-y-4 max-w-full mx-auto">
+            <div className="flex justify-between mb-4">
+            <h2 className="text-white flex text-center">Langue</h2>
+    <button onClick={addLanguage} type="button" className="btn btn-primary btn-sm flex items-center space-x-2">
+      <IoAddCircleSharp size={24} />
+      <span>Ajouter une langue</span>
+    </button>
+    </div>
+    {isLanguage && (
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="flex flex-col">
           <input
             placeholder="Ajouter une nouvelle langue"
             onChange={(e) => setLanguage(e.target.value)}
             type="text"
             name="language"
             value={language}
+            className="p-2 border border-gray-300 rounded-md"
           />
-          <select onChange={(e) => setLevel(e.target.value)} value={level}>
-            <option selected hidden value="">Choisir le niveau</option>
+        </div>
+        <div className="flex flex-col">
+          <select
+            onChange={(e) => setLevel(e.target.value)}
+            value={level}
+            className="p-2 border border-gray-300 rounded-md"
+          >
+            <option hidden value="">Choisir le niveau</option>
             <option value="Débutant">Débutant</option>
-            <option value="Intermédiare">Intermédiaire</option>
+            <option value="Intermédiaire">Intermédiaire</option>
             <option value="Avancé">Avancé</option>
           </select>
-          <input
-            placeholder="Ajouter un niveau"
-            onChange={(e) => setLevel(e.target.value)}
-            type="text"
-            name="level"
-            value={level}
-          />
-          <button onClick={handleSave} type="submit" className="btn btn-primary btn-sm my-1"><HiSave size={24}/></button>
-          <button onClick={handleCancel} className="btn btn-primary btn-sm my-1"><MdCancel size={24}/></button>
-        </form>
-      )}
-      <div>
-        {langues.map((item) => (
-          <div key={item._id} className="flex justify-between items-center">
-            <p>{item.name}</p>
-            {/* <p>{item._id}</p> */}
-            <p>{item.level}</p>
-            <button
-              onClick={() => handleDelete(item._id)}
-              className="btn btn-primary btn-sm my-1"
-            >
-              <MdDelete size={24} color="red"/>
-            </button>
+        </div>
+        <div className="flex space-x-2">
+          <button type="submit" className="p-2 bg-purple-800 text-white rounded-md hover:bg-purple-700 flex items-center space-x-2">
+            <HiSave size={24} />
+            <span>Enregistrer</span>
+          </button>
+          <button onClick={handleCancel} type="button" className="p-2 bg-red-600 text-white rounded-md hover:bg-red-500 flex items-center space-x-2">
+            <MdCancel size={24} />
+            <span>Annuler</span>
+          </button>
+        </div>
+      </form>
+    )}
+    <div className="space-y-4">
+      {langues.map((item) => (
+        <div key={item._id} className="flex justify-between items-center p-2 border border-gray-300 rounded-md bg-white">
+          <div>
+            <p className="text-gray-700">{item.name}</p>
+            <p className="text-gray-700">{item.level}</p>
           </div>
-        ))}
-      </div>
+          <button
+            onClick={() => handleDelete(item._id)}
+            className="p-2 bg-red-600 text-white rounded-md hover:bg-red-500 flex items-center space-x-2"
+          >
+            <MdDelete size={24} />
+          </button>
+        </div>
+      ))}
     </div>
+  </div>
   );
 }

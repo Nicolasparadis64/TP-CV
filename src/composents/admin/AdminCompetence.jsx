@@ -86,35 +86,48 @@ export default function AdminCompetence() {
 //   }
 
   return (
-    <div>
-      <button onClick={addSkill} type="button" className="btn btn-primary btn-sm"><IoAddCircleSharp size={24}/>
-</button>
+    <div className="p-4 sm:p-6 md:p-8 lg:p-10 bg-[#222] rounded-lg shadow-lg">
+      <div className="flex justify-between mb-4">
+      <h2 className="text-white flex text-center">Compétences</h2>
+        <button onClick={addSkill} type="button" className="btn btn-primary btn-sm flex items-center gap-2">
+          <IoAddCircleSharp size={24} />
+          <span>Ajouter</span>
+        </button>
+      </div>
+
       {isAdd && (
-        <form onSubmit={handleSubmit}>
-          <input
-            placeholder="Ajouter une nouvelle compétence"
-            onChange={(e) => setSkill(e.target.value)}
-            type="text"
-            name="skill"
-            value={skill}
-          />
-          <button type="submit" className="btn btn-primary btn-sm my-1">
-          <HiSave size={24}/>
-          </button>
-          <button onClick={handleCancel} className="btn btn-primary btn-sm my-1"><MdCancel size={24}/>
-</button>
+        <form onSubmit={handleSubmit} className="mb-6">
+          <div className="flex flex-col sm:flex-row gap-4 mb-4">
+            <input
+              placeholder="Ajouter une nouvelle compétence"
+              onChange={(e) => setSkill(e.target.value)}
+              type="text"
+              name="skill"
+              value={skill}
+              className="flex-grow p-2 border border-gray-300 rounded-md"
+            />
+            <button type="submit" className="btn btn-primary btn-sm flex items-center gap-2">
+              <HiSave size={24} />
+              <span>Enregistrer</span>
+            </button>
+            <button onClick={handleCancel} className="btn btn-secondary btn-sm flex items-center gap-2">
+              <MdCancel size={24} />
+              <span>Annuler</span>
+            </button>
+          </div>
         </form>
       )}
-      <div>
+
+      <div className="space-y-4">
         {competences.map((item) => (
-          <div key={item._id} className="flex justify-between items-center">
-            <p>{item.skill}</p>
-            <p> {item._id} </p>
+          <div key={item._id} className="flex justify-between items-center p-4 bg-white rounded-lg shadow-sm">
+            <p className="flex-grow">{item.skill}</p>
             <button
               onClick={() => handleDelete(item._id)}
-              className="btn btn-primary btn-sm my-1"
+              className="btn btn-danger btn-sm flex items-center gap-2"
             >
-              <MdDelete size={24} color="red"/>
+              <MdDelete size={24} color="red" />
+              <span>Supprimer</span>
             </button>
           </div>
         ))}

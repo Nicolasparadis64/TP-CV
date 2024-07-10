@@ -35,32 +35,54 @@ export default function AdminContact() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        onChange={(e) => setNom(e.target.value)}
-        type='text'
-        name='nom'
-        value={nom}
-      />
-      <input
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        type='email'
-        name='email'
-      />
-      <input
-        value={prenom}
-        onChange={(e) => setPrenom(e.target.value)}
-        type='text'
-        name='prenom'
-      />
-      <input
-        value={tel}
-        onChange={(e) => setTel(e.target.value)}
-        type='tel'
-        name='tel'
-      />
-      <button type='submit'>Valider</button>
+    <form onSubmit={handleSubmit} className="p-4 sm:p-6 md:p-8 lg:p-10 bg-[#222] rounded-lg shadow-lg space-y-4 min-w-full mx-auto">
+      <div className="flex flex-col">
+        <label htmlFor="nom" className="mb-1 text-gray-700">Nom</label>
+        <input
+          id="nom"
+          onChange={(e) => setNom(e.target.value)}
+          type='text'
+          name='nom'
+          value={nom}
+          className="p-2 border border-gray-300 rounded-md"
+        />
+      </div>
+      <div className="flex flex-col">
+        <label htmlFor="email" className="mb-1 text-gray-700">Email</label>
+        <input
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          type='email'
+          name='email'
+          className="p-2 border border-gray-300 rounded-md"
+        />
+      </div>
+      <div className="flex flex-col">
+        <label htmlFor="prenom" className="mb-1 text-gray-700">Prénom</label>
+        <input
+          id="prenom"
+          value={prenom}
+          onChange={(e) => setPrenom(e.target.value)}
+          type='text'
+          name='prenom'
+          className="p-2 border border-gray-300 rounded-md"
+        />
+      </div>
+      <div className="flex flex-col">
+        <label htmlFor="tel" className="mb-1 text-gray-700">Téléphone</label>
+        <input
+          id="tel"
+          value={tel}
+          onChange={(e) => setTel(e.target.value)}
+          type='tel'
+          name='tel'
+          className="p-2 border border-gray-300 rounded-md"
+        />
+      </div>
+      <button type='submit' className="p-2 bg-purple-800 text-white rounded-md hover:bg-purple-700">
+        Valider
+      </button>
     </form>
   )
 }
