@@ -14,6 +14,7 @@ import Outdoor from "../portfolio/Outdoor";
 import NumeroMystere from "../portfolio/NumeroMystere";
 import TodoList from "../portfolio/TodoList";
 import ShopCo from "../portfolio/ShopCo";
+import Meteo from "../portfolio/Meteo";
 
 
 export default function Portfolio() {
@@ -46,6 +47,9 @@ export default function Portfolio() {
             </div>
             <div className="p-4 sm:p-6 md:p-12 lg:p-16 min-w-full">
                 <ShopCo/>
+            </div>
+            <div className="p-4 sm:p-6 md:p-12 lg:p-16 min-w-full">
+                <Meteo/>
             </div>
         </section>
       </main>
